@@ -1,0 +1,14 @@
+import React from 'react';
+import moment from "moment"; //! "moment is used to pick the vedio duration length from Api"
+
+
+const VideoLength = ({time}) => {
+
+const videoLengthinSeconds=moment().startOf("day").seconds(time).format("H:mm:ss");
+
+  return (
+    <div className="absolute bottom-2 right-2 bg-black py-1 px-2 text-white text-xs rounded-md">{videoLengthinSeconds}</div>
+  )
+}
+
+export default VideoLength

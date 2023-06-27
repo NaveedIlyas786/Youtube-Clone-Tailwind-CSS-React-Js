@@ -8,7 +8,7 @@ import { AppContext } from './context/ContextApi';
 
 const  App=()=> {
   return (
-    <AppContext>
+    <AppContext> 
        <BrowserRouter>
        <div className="flex flex-col h-full">
         <Header/>
@@ -25,4 +25,3 @@ const  App=()=> {
 }
 
 export default App
- 

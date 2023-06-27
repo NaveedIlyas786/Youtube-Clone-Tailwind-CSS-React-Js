@@ -27,7 +27,6 @@ const searchQueryHandler = (event)=>{
 const mobileMenuToggle=()=>{
   setMobileMenu(!mobileMenu);
   console.log(!mobileMenu);
-  console.log(setMobileMenu(!mobileMenu));
 }
 
 const {pathname}=useLocation();
@@ -35,7 +34,7 @@ const pageName=pathname.split("/")?.filter(Boolean)?.[0];
 
 //! Now ⇊⇊ we will write the " HTML CODE " for our header Section
   return (
-    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-black">
+    <div className="sticky top-0 z-10 flex flex-row  items-center justify-between h-14 px-4 md:px-5 bg-black">
       {loading && <Loader/>}
       <div className="flex h-5 items-center">
 

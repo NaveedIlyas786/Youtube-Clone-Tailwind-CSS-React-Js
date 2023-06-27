@@ -3,15 +3,11 @@ import React, { createContext, useState, useEffect } from "react";
 import { fetchDataFromApi } from "../utils/api";
 export const Context = createContext();
 
-export const AppContext = (props) => {
+export const AppContext = ({children}) => {
     const [loading, setLoading] = useState(false);
     const [searchResults, setSearchResults] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("New");
     const [mobileMenu, setMobileMenu] = useState(false);
-
-    useEffect(() => {
-        fetchSelectedCategoryData(selectedCategory);
-    }, [selectedCategory]);
 
     const fetchSelectedCategoryData = (query) => {
         setLoading(true);
@@ -21,6 +17,10 @@ export const AppContext = (props) => {
             setLoading(false);
         });
     };
+
+    useEffect(() => {
+        fetchSelectedCategoryData(selectedCategory);
+    }, [selectedCategory]);
 
     return (
         <Context.Provider
@@ -34,7 +34,7 @@ export const AppContext = (props) => {
                 setMobileMenu,
             }}
         >
-            {props.children}
+            {children}
         </Context.Provider>
     );
 };

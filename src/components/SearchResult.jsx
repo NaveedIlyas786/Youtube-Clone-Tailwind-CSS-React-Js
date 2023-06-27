@@ -13,7 +13,7 @@ const SearchResult = () => {
 
     useEffect(() => {
         document.getElementById("root").classList.remove("custom-h");
-        fetchSearchResults();
+        fetchSearchResults(); 
     }, [searchQuery]);
 
     const fetchSearchResults = () => {

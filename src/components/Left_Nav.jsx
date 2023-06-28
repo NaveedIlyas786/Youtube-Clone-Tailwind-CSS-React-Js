@@ -18,7 +18,7 @@ const LeftNav = () => {
       case "home":
         return setSelectedCategory(name);
       case "menu":
-        return false;
+        return false; 
       default:
         break;
     }
@@ -26,8 +26,7 @@ const LeftNav = () => {
 
   return (
     <div
-      className={`sm:block w-[240px] overflow-y-auto h-full py-4 bg-black  absolute sm:relative z-10 translate-x-[-240px] sm:translate-x-0 transition-all  ${mobileMenu ? "translate-x-[0px]" : " "}`}
-    >
+    className={`sm:block w-[240px] overflow-y-auto h-full py-4 bg-black  absolute sm:relative z-10 translate-x-[-240px] sm:translate-x-0 transition-all  ${mobileMenu ? "translate-x-[0px]" : " "}`}>
       <div className="flex px-5 bg-black absoulte flex-col">
         {categories.map((item) => {
           return (
